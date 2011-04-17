@@ -10,4 +10,4 @@ cd tmp
 pear package
 mv php2odp*.tgz ..
 cd ..
-#rm -rf tmp
+rm -rf tmp
