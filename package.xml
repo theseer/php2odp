@@ -72,7 +72,7 @@
     <min>1.6</min>
    </package>
    <extension>
-    <name>tokenizer</name>
+    <name>zip</name>
    </extension>
   </required>
  </dependencies>
@@ -89,7 +89,7 @@
  </phprelease>
  <phprelease>
   <filelist>
-   <install as="phpodp" name="php2odp.php" />
+   <install as="php2odp" name="php2odp.php" />
    <ignore name="php2odp.bat" />
   </filelist>
  </phprelease>

@@ -40,7 +40,7 @@
  */
 
 require 'TheSeer/fDOMDocument/autoload.php';
-require  'ezc/Base/base.php';
+require 'ezc/Base/base.php';
 require __DIR__ . '/src/autoload.php';
 spl_autoload_register( array('ezcBase','autoload'));
 
