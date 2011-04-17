@@ -51,7 +51,11 @@ namespace TheSeer\php2odp {
 
         protected function getSourceAsDom($src) {
             $xml = new \TheSeer\fDom\fDOMDocument();
-            $xml->loadHTML(highlight_file($src, true));
+            if ('-' == $src) {
+                $xml->loadHTML(highlight_string(stream_get_contents(STDIN), true));
+            } else {
+                $xml->loadHTML(highlight_file($src, true));
+            }
 
             $src = new \XMLReader();
             $src->xml($xml->saveXML());
@@ -124,7 +128,7 @@ namespace TheSeer\php2odp {
         }
 
         public function execute($srcFile, $destFile) {
-            if (!file_exists($srcFile)) {
+            if ($srcFile != '-' && !file_exists($srcFile)) {
                 throw new ApplicationException("'$srcFile' does not exist", ApplicationException::SourceNotFound);
             }
             if (file_exists($destFile)) {
