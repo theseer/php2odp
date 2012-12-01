@@ -121,7 +121,7 @@ namespace TheSeer\php2odp {
 
             $input->argumentDefinition = new \ezcConsoleArguments();
             $input->argumentDefinition[0] = new \ezcConsoleArgument( "source" );
-            $input->argumentDefinition[0]->shorthelp = "The PHP source to process.";
+            $input->argumentDefinition[0]->shorthelp = "The PHP source file to process or - for STDIN.";
 
             $input->argumentDefinition[1] = new \ezcConsoleArgument( "target" );
             $input->argumentDefinition[1]->shorthelp = "The filename for the OpenDocument Presentation file";
